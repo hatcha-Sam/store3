@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.wrapper {
+  /*background-color: green;*/
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+.lef-col,
+.right-col {
+  /*background-color: red;*/
+  flex-basis: 50%;
+  height: 100vh;
+  position: relative;
+}
+.logo {
+  display: block;
+  width: 80px;
+  margin-top: 30px;
+  margin-left: 120px;
+}
+
+.cont {
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 120px;
+  transform: translateY(-50%);
+}
+.cont h1 {
+  color: #05a35f;
+  font-size: 60px;
+  line-height: 70px;
+  margin: 25px 0px;
+}
+.cont p {
+  color: #777;
+  font-size: 17px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+button {
+  width: 200px;
+  border: none;
+  background: #05a35f;
+  box-shadow: 0px 10px 10px 1px rgba(219, 219, 219, 0.5);
+  padding: 25px 0;
+  color: #fff;
+  outline: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+.slider {
+  width: 100%;
+  height: 60%;
+  display: flex;
+}
+
+.slider img {
+  width: 100%;
+}
+
+.cont-slider {
+  width: 100%;
+  height: 50%;
+  background: #05a35f;
+  padding-top: 30px;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.cont-slider h2 {
+  font-size: 26px;
+  font-weight: 100;
+  color: #fff;
+}
+.cont-slider p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #dfffdd;
+  margin-bottom: 30px;
+}
+.cont-slider hr {
+  border: none;
+  width: 270px;
+  height: 1px;
+  background: #b5e3cf;
+  margin: 20px 0 30px;
+}
+.controler {
+  width: 120px;
+  padding-bottom: 30px;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controler img {
+  width: 45px;
+  cursor: pointer;
+}
+.vertical-line {
+  width: 2px;
+  height: 30px;
+  background: #b5e3cf;
+}
+/*-----media Query for small devices -----*/
+@media screen and (max-width: 800px) {
+  .logo {
+    margin: 30px auto;
+  }
+  .lef-col,
+  .right-col {
+    flex-basis: 100%;
+  }
+  .cont {
+    left: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  .cont h1 {
+    font-size: 34px;
+    line-height: 38px;
+  }
+  .slider {
+    height: auto;
+  }
+  .cont-slider {
+    height: auto;
+  }
+}

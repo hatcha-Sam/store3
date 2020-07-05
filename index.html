@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Van Hauser</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="lef-col">
+        <img src="images/logo.png" class="logo" />
+        <div class="cont">
+          <h1>Add plants to your living space</h1>
+          <p>
+            plants are an expnasive Lorem Ipsum is simply dummy text of the
+            printing
+          </p>
+          <button type="button">LEARN MORE</button>
+        </div>
+      </div>
+
+      <div class="right-col">
+        <div class="slider">
+          <img src="images/pic-1.jpg" id="Slide" />
+        </div>
+        <div class="cont-slider">
+          <h2>Where i can find ideas for a small rooms</h2>
+          <hr />
+          <p>
+            plants are an expnasive Lorem Ipsum is simply dummy text of the
+            printing plants are <br />
+            an expnasive Lorem Ipsum is simply dummy text of the printing are an
+            expnasive Lorem <br />
+            Ipsum is simply dummy text of the printing
+          </p>
+          <div class="controler">
+            <img src="images/back.png" id="BackBtn" />
+            <div class="vertical-line"></div>
+            <img src="images/next.png" id="NextBtn" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var Slide = document.getElementById("Slide");
+      var BackBtn = document.getElementById("BackBtn");
+      var NextBtn = document.getElementById("NextBtn");
+      var Slideimages = new Array(
+        "images/pic-1.jpg",
+        "images/pic-2.jpg",
+        "images/pic-3.jpg",
+        "images/pic-4.jpg"
+      );
+      let i = 0;
+      NextBtn.onclick = function () {
+        if (i < 3) {
+          Slide.src = Slideimages[i + 1];
+          i++;
+        }
+      };
+
+      BackBtn.onclick = function () {
+        if (i > 0) {
+          Slide.src = Slideimages[i - 1];
+          i--;
+        }
+      };
+    </script>
+  </body>
+</html>
